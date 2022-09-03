@@ -1,8 +1,17 @@
-import React from "react";
+import React,{ useState, useEffect } from "react";
 import "./About.scss";
 
+import {motion} from 'framer-motion'
+
 const About = () => {
-	return <div>About</div>;
+   return (
+      <h2 className='head-text'>
+         I know That <br />
+         <span>Good Design</span> <br />
+         means <br />
+      <span>Good Business</span>
+      </h2> 
+   );
 };
 
 export default About;
