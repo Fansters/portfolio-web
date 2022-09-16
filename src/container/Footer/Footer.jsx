@@ -34,7 +34,7 @@ const Footer = () => {
 
 	return (
 		<>
-			<h2 className='head-text'>Take a break and chat:</h2>
+			<h2 className='head-text'>Sazinies ar mani!</h2>
 
 			<div className='app__footer-cards'>
 				<div className='app__footer-card'>
@@ -57,7 +57,7 @@ const Footer = () => {
 						<input
 							className='p-text'
 							type='text'
-							placeholder='Tavs vards'
+							placeholder='Tavs vārds'
 							name='name'
 							value={name}
 							onChange={handleChangeInput}
@@ -74,15 +74,21 @@ const Footer = () => {
 						/>
 					</div>
 					<div>
-						<textarea className='p-text' placeholder='Tava zina' value={message} name='message' />
+						<textarea
+							className='p-text'
+							placeholder='Tava ziņa'
+							value={message}
+							name='message'
+							onChange={handleChangeInput}
+						/>
 					</div>
 					<button type='button' className='p-text' onClick={handleSubmit}>
-						{loading ? "Suta" : "Sutit zinu"}
+						{loading ? "Sūta..." : "Sūtīt ziņu"}
 					</button>
 				</div>
 			) : (
 				<div>
-					<h3 className='head-text'>Paldies par zinu!</h3>
+					<h3 className='head-text'>Paldies par ziņu!</h3>
 				</div>
 			)}
 		</>
