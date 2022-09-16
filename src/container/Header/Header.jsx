@@ -17,7 +17,8 @@ const scaleVariants = {
 };
 
 const Header = () => (
-	<div className='app__header app__flex'>
+   <div className='app__header app__flex'>
+      
 		<motion.div
 			whileInView={{ x: [-100, 0], opacity: [0, 1] }}
 			transition={{ duration: 0.5 }}
@@ -27,14 +28,14 @@ const Header = () => (
 				<div className='badge-cmp app__flex'>
 					<span>👋</span>
 					<div style={{ marginLeft: 20 }}>
-						<p className='p-text'>Hello, I am</p>
-						<h1 className='head-text'>Micael</h1>
+						<p className='p-text'> &#60; Hello, I am </p>
+						<h1 className='head-text'>Edmunds</h1>
 					</div>
 				</div>
 
 				<div className='tag-cmp app__flex'>
-					<p className='p-text'>Web Developer</p>
-					<p className='p-text'>Freelancer</p>
+					<p className='p-text'>&#60; Web Developer &#47;&#62;</p>
+					<p className='p-text'>&#60; Freelancer &#47;&#62;</p>
 				</div>
 			</div>
 		</motion.div>
@@ -44,7 +45,7 @@ const Header = () => (
 			transition={{ duration: 0.5, delayChildren: 0.5 }}
 			className='app__header-img'
 		>
-			<img src={images.laptop} alt='profile_bg' />
+			<img className='app__header-laptop' src={images.laptop} alt='profile_bg' />
 			<motion.img
 				whileInView={{ scale: [0, 1] }}
 				transition={{ duration: 1, ease: "easeInOut" }}
@@ -61,6 +62,8 @@ const Header = () => (
 				</div>
 			))}
 		</motion.div>
+         {/* <div className='app__header-codeBG'>Text</div> */}
+		
 	</div>
 );
 
