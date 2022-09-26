@@ -5,8 +5,8 @@
 	justify-content: space-between;
 	align-items: center;
 
-	padding: 1rem 2rem;
-	background: rgba(32, 32, 32, 0.089);
+	padding: 1.5rem 2rem;
+	background: rgba(32, 32, 32, 0.024);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
@@ -114,7 +114,7 @@
 		top: 0;
 		bottom: 0;
 		right: 0;
-		z-index: 5;
+		z-index: 99;
 		padding: 1rem;
 		width: 80%;
 		height: 100vh;
@@ -151,7 +151,7 @@
 				a {
 					color: var(--gray-color);
 					text-decoration: none;
-					font-size: 1rem;
+					font-size: 1.5rem;
 					text-transform: uppercase;
 					font-weight: 500;
 					transition: all 0.2s ease-in-out;

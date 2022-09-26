@@ -5,21 +5,9 @@
 	// background-repeat: repeat;
 	// background-position: center;
 
-	background-image: linear-gradient(
-		to top,
-		#ffffff,
-		#fbfbfb,
-		#f7f7f7,
-		#f4f4f4,
-		#f0f0f0,
-		#ebebeb,
-		#e5e5e5,
-		#e0e0e0,
-		#d7d7d7,
-		#cfcfcf,
-		#c6c6c6,
-		#bebebe
-	);
+		background-image: url(../../assets/layered-homeBG.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
 
 	.app__wrapper {
 		padding: 0;
@@ -75,26 +63,36 @@
 }
 
 .app__header-badge {
+   padding-top: 4rem;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 	flex-direction: column;
-	z-index: 5;
+	z-index: 4;
+
+   @media screen and(max-width:480px) {
+      padding-top:2rem;
+   }
 
 	.badge-cmp,
 	.tag-cmp {
-		padding: 1rem 2rem;
+		padding: 1rem 2.5rem;
 		border: var(--white-color);
-		border-radius: 15px;
+		border-radius: 10px;
 		flex-direction: row;
 		width: auto;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      background-color: var(--secondary-color);
+		box-shadow: 0 0 20px rgba(0, 157, 255, 0.652);
+      
+      @media screen and(max-width:480px) {
+         padding: 1rem 1.5rem;
+      }
 	}
 
 	.tag-cmp {
 		flex-direction: column;
-		margin-top: 3rem;
+		margin-top: 2rem;
 
 		p {
 			width: 100%;
@@ -219,10 +217,10 @@
 @keyframes hovering {
 	from {
 		scale: 1;
-		transform: translateY(-1rem);
+		transform: translateY(-.25rem);
 	}
 	to {
-		scale: 0.95;
-		transform: translateY(1rem);
+		scale: 0.99;
+		transform: translateY(.25rem);
 	}
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+// import KUTE from "kute.js";
 
 import { AppWrap } from "../../wrapper";
 
@@ -16,9 +17,15 @@ const scaleVariants = {
 	},
 };
 
+// var tween = KUTE.fromTo(
+// 	"#blob1",
+// 	{ path: "#blob1" },
+// 	{ path: "#blob2" },
+// 	{ repeat: 999, duration: 3000, yoyo: true }
+// ).start();
+
 const Header = () => (
-   <div className='app__header app__flex'>
-      
+	<div className='app__header app__flex'>
 		<motion.div
 			whileInView={{ x: [-100, 0], opacity: [0, 1] }}
 			transition={{ duration: 0.5 }}
@@ -46,13 +53,13 @@ const Header = () => (
 			className='app__header-img'
 		>
 			<img className='app__header-laptop' src={images.laptop} alt='profile_bg' />
-			<motion.img
+			{/* <motion.img
 				whileInView={{ scale: [0, 1] }}
 				transition={{ duration: 1, ease: "easeInOut" }}
 				src={images.circle}
 				alt='profile_circle'
 				className='overlay_circle'
-			/>
+			/> */}
 		</motion.div>
 
 		<motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className='app__header-circles'>
@@ -62,8 +69,7 @@ const Header = () => (
 				</div>
 			))}
 		</motion.div>
-         {/* <div className='app__header-codeBG'>Text</div> */}
-		
+		{/* <div className='app__header-codeBG'>Text</div> */}
 	</div>
 );
 
