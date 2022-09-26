@@ -37,10 +37,9 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import laptop from "../assets/laptop.png";
-import blobHome1 from "../assets/blob-home1.svg";
-import blobHome4 from "../assets/blob-haikei4.svg";
-import homeBG from "../assets/blurry-gradient-haikei-home.svg";
 import layeredBG from "../assets/layered-homeBG.svg";
+import waveBGT from "../assets/wave-bg2.svg";
+import waveBGB from "../assets/wave-bg.svg";
 
 export default {
 	email,
@@ -79,8 +78,7 @@ export default {
 	skype,
 	spotify,
 	laptop,
-	blobHome1,
-	homeBG,
-	blobHome4,
 	layeredBG,
+	waveBGB,
+	waveBGT,
 };

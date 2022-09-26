@@ -1,3 +1,9 @@
+#about {
+	position: relative;
+	background-image: url(../../assets/wave-bg2.svg), url(../../assets/wave-bg.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+}
 .app__about {
 	flex: 1;
 	width: 100%;
