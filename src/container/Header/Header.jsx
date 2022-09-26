@@ -41,7 +41,7 @@ const Header = () => (
 				</div>
 
 				<div className='tag-cmp app__flex'>
-					<p className='p-text'>&#60; Web Developer &#47;&#62;</p>
+					<p className='p-text'>&#60; Frontend Developer &#47;&#62;</p>
 					<p className='p-text'>&#60; Freelancer &#47;&#62;</p>
 				</div>
 			</div>
@@ -62,14 +62,20 @@ const Header = () => (
 			/> */}
 		</motion.div>
 
-		<motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className='app__header-circles'>
-			{[images.flutter, images.redux, images.sass].map((circle, index) => (
+		<motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className='app__header-circles mobile-hidden'>
+			{[images.css, images.html, images.sass].map((circle, index) => (
 				<div className='circle-cmp app__flex' key={`circle-${index}`}>
 					<img src={circle} alt='profile_bg' />
 				</div>
 			))}
 		</motion.div>
-		{/* <div className='app__header-codeBG'>Text</div> */}
+		<motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className='app__header-circles v2'>
+			{[images.javascript, images.react, images.typescript].map((circle, index) => (
+				<div className='circle-cmp app__flex' key={`circle-${index}`}>
+					<img src={circle} alt='profile_bg' />
+				</div>
+			))}
+		</motion.div>
 	</div>
 );
 
