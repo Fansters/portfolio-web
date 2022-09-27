@@ -37,7 +37,8 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import laptop from "../assets/laptop.png";
-import layeredBG from "../assets/layered-homeBG.svg";
+import layeredBG from "../assets/layered-homeBG2.svg";
+import textClipBG from "../assets/low-poly-grid-haikei.png";
 import waveBGT from "../assets/wave-bg2.svg";
 import waveBGB from "../assets/wave-bg.svg";
 
@@ -81,4 +82,5 @@ export default {
 	layeredBG,
 	waveBGB,
 	waveBGT,
+	textClipBG,
 };
