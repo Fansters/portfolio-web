@@ -25,7 +25,6 @@ import about03 from "../assets/about03.png";
 import about04 from "../assets/about04.png";
 
 import profile from "../assets/profile.png";
-import circle from "../assets/circle.svg";
 import logo from "../assets/devLogo.png";
 import logoForDark from "../assets/devLogoForDark.png";
 
@@ -38,9 +37,7 @@ import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import laptop from "../assets/laptop.png";
 import layeredBG from "../assets/layered-homeBG2.svg";
-import textClipBG from "../assets/low-poly-grid-haikei.png";
-import waveBGT from "../assets/wave-bg2.svg";
-import waveBGB from "../assets/wave-bg.svg";
+import textClipBG from "../assets/low-poly-grid-haikei.jpg";
 
 export default {
 	email,
@@ -67,7 +64,6 @@ export default {
 	about03,
 	about04,
 	profile,
-	circle,
 	logo,
 	logoForDark,
 	homePage,
@@ -80,7 +76,5 @@ export default {
 	spotify,
 	laptop,
 	layeredBG,
-	waveBGB,
-	waveBGT,
 	textClipBG,
 };

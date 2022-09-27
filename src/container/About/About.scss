@@ -1,8 +1,8 @@
 #about {
 	position: relative;
-	// background-image: url(../../assets/wave-bg2.svg), url(../../assets/wave-bg.svg);
-	// background-repeat: no-repeat, no-repeat;
-	// background-size: cover, cover;
+	background-image: url(../../assets/topBG-about.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .app__about {
 	flex: 1;
@@ -11,7 +11,7 @@
 }
 h2 {
 	background: url(../../assets/low-poly-grid-haikei.jpg);
-   background-clip: text;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: #2e2e2e;
