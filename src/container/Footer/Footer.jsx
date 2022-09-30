@@ -39,13 +39,13 @@ const Footer = () => {
 			<div className='app__footer-cards'>
 				<div className='app__footer-card'>
 					<img src={images.email} alt='email' />
-					<a href='mailto:edmundseizentals@gmail.com' className='p-text'>
+					<a href='mailto:edmundseizentals@gmail.com' className='p-text white-text'>
 						edmundseizentals@gmail
 					</a>
 				</div>
 				<div className='app__footer-card'>
 					<img src={images.mobile} alt='mobile' />
-					<a href='tel: +371 26372722' className='p-text'>
+					<a href='tel: +371 26372722' className='p-text white-text'>
 						26372722
 					</a>
 				</div>
@@ -55,7 +55,7 @@ const Footer = () => {
 				<div className='app__footer-form app__flex'>
 					<div className='app__flex'>
 						<input
-							className='p-text'
+							className='p-text '
 							type='text'
 							placeholder='Tavs vārds'
 							name='name'
