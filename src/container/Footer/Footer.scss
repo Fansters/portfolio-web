@@ -29,7 +29,7 @@
 		padding: 1rem;
 		border-radius: 10px;
 		cursor: pointer;
-		background-color: #46364a;
+		background-color: #387EFF;
 		transition: all 0.25s ease-in-out;
 
 		img {
@@ -47,8 +47,8 @@
 		}
 
 		&:hover {
-			// box-shadow: 0 0 15px #5a525c;
-         scale: 1.05;
+			box-shadow: 0 0 15px #387eff80;
+         // scale: 1.05;
 		}
 
 		@media screen and(max-width:450px) {
@@ -78,7 +78,7 @@
 		margin: 0.75rem 0;
 		border-radius: 10px;
 		cursor: pointer;
-		background-color: #607291;
+		background-color: #546075;
 		transition: all 0.25s ease-in-out;
 
 		input,
@@ -87,7 +87,7 @@
 			padding: 0.95rem;
 			border: none;
 			border-radius: 7px;
-			background-color: #607291;
+			background-color: #546075;
 
 			font-family: var(--font-base);
 			color: var(--white-color);
