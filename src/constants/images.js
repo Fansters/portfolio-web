@@ -27,6 +27,7 @@ import about04 from "../assets/about04.png";
 import profile from "../assets/profile.png";
 import logo from "../assets/devLogo.png";
 import logoForDark from "../assets/devLogoForDark.png";
+import logoForNavbar from "../assets/devLogoForNavbar.png";
 
 import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
@@ -66,6 +67,7 @@ export default {
 	profile,
 	logo,
 	logoForDark,
+	logoForNavbar,
 	homePage,
 	adidas,
 	amazon,

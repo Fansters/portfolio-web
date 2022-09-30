@@ -9,17 +9,29 @@ import "./Navbar.scss";
 const Navbar = () => {
 	const [toggle, setToggle] = useState(true);
 
+	const navbar = document.querySelector(".app__navbar");
+	window.onscroll = () => {
+		if (window.scrollY > 300) {
+			navbar.classList.add("nav-active");
+			navbar.classList.add("nav-hover");
+		} else {
+			navbar.classList.remove("nav-active");
+		}
+	};
+
 	return (
 		<nav className='app__navbar'>
 			<div className='app__navbar-logo'>
-				<img src={images.logoForDark} alt='logo' />
+				<img src={images.logoForNavbar} alt='logo' />
 			</div>
 			{/* Desktop menu */}
 			<ul className='app__navbar-links'>
 				{["home", "about", "work", "skills", "contact"].map((item) => (
 					<li className='app__flex p-text' key={`link-${item}`}>
 						<div id='navbar__div' />
-						<a className={`navLink-${item}`} href={`#${item}`}>{item}</a>
+						<a className={`navLink-${item}`} href={`#${item}`}>
+							{item}
+						</a>
 						<div id='navbar__divv' />
 					</li>
 				))}
