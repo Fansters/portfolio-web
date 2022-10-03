@@ -11,9 +11,8 @@ const Navbar = () => {
 
 	const navbar = document.querySelector(".app__navbar");
 	window.onscroll = () => {
-		if (window.scrollY > 300) {
+		if (window.scrollY > 350) {
 			navbar.classList.add("nav-active");
-			navbar.classList.add("nav-hover");
 		} else {
 			navbar.classList.remove("nav-active");
 		}
