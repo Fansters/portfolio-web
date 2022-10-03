@@ -122,13 +122,14 @@
 		right: 0;
 		z-index: 9909;
 		padding: 1rem;
-		width: 80%;
+		width: 100%;
 		height: 100vh;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
 		flex-direction: column;
 		// missing bg pic
+      background-image: url(../../assets/blobBurgerMenuV2.svg);
 		background-color: var(--white-color);
 		background-size: cover;
 		background-repeat: repeat;

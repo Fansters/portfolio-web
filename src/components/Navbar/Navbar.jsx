@@ -9,14 +9,14 @@ import "./Navbar.scss";
 const Navbar = () => {
 	const [toggle, setToggle] = useState(true);
 
-	const navbar = document.querySelector(".app__navbar");
-	window.onscroll = () => {
-		if (window.scrollY > 350) {
-			navbar.classList.add("nav-active");
-		} else {
-			navbar.classList.remove("nav-active");
-		}
-	};
+	// const navbar = document.querySelector(".app__navbar");
+	// window.onscroll = () => {
+	// 	if (window.scrollY > 350) {
+	// 		navbar.classList.add("nav-active");
+	// 	} else {
+	// 		navbar.classList.remove("nav-active");
+	// 	}
+	// };
 
 	return (
 		<nav className='app__navbar'>
