@@ -1,8 +1,8 @@
 #about {
 	position: relative;
-	background-image: url(../../assets/waveAboutBG.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url(../../assets/waveAboutBG.svg), url(../../assets/aboutWaveBG.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
 }
 .app__about {
 	flex: 1;
