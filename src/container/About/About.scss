@@ -1,11 +1,12 @@
 #about {
 	position: relative;
-	background-image: 
-   url(../../assets/aboutTopBGWave.svg),
-   url(../../assets/aboutWaveBG.svg),
-		url(../../assets/aboutBGShapesV3.svg);
+	background-image: url(../../assets/aboutWaveBG.svg), url(../../assets/aboutBGShapesV3.svg);
 	background-repeat: no-repeat, no-repeat;
 	background-size: cover, cover;
+	@media screen and(min-width:500px) {
+		background-image: url(../../assets/aboutTopBGWave.svg), url(../../assets/aboutWaveBG.svg),
+			url(../../assets/aboutBGShapesV3.svg);
+	}
 }
 .app__about {
 	flex: 1;

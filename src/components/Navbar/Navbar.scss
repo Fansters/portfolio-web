@@ -6,9 +6,9 @@
 	align-items: center;
 
 	padding: 1.75rem 2rem;
-	background: rgba(255, 255, 255, 0.024);
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
+	background: rgba(255, 255, 255, 0.694);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	border-bottom: 1px solid #387eff;
 	position: fixed;
 	z-index: 1111;
@@ -60,12 +60,12 @@
 			transition: all 0.2s ease-in-out;
 		}
 		#navbar__div {
-			margin-bottom: 1px;
+			margin-bottom: 2px;
 			transform: translateY(-8px);
 		}
 		#navbar__divv {
-			margin-top: 1px;
-			transform: translateY(8px);
+			margin-top: 2px;
+			transform: translateY(7px);
 		}
 
 		a {
@@ -89,7 +89,7 @@
 				transform: translateY(-2px);
 			}
 			#navbar__divv {
-				transform: translateY(1px);
+				transform: translateY(2px);
 			}
 		}
 	}
