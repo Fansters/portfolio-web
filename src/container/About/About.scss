@@ -1,6 +1,9 @@
 #about {
 	position: relative;
-	background-image: url(../../assets/waveAboutBG.svg), url(../../assets/aboutWaveBG.svg);
+	background-image: 
+   url(../../assets/aboutTopBGWave.svg),
+   url(../../assets/aboutWaveBG.svg),
+		url(../../assets/aboutBGShapesV3.svg);
 	background-repeat: no-repeat, no-repeat;
 	background-size: cover, cover;
 }
