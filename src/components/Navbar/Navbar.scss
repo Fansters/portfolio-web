@@ -74,10 +74,10 @@
 			flex-direction: column;
 			text-transform: uppercase;
 			font-weight: 500;
-			transition: all 0.2s ease-in-out;
+			
 
 			&:hover {
-            color: var(--secondary-color);
+				color: var(--secondary-color);
 			}
 		}
 
@@ -129,7 +129,7 @@
 		align-items: flex-end;
 		flex-direction: column;
 		// missing bg pic
-      background-image: url(../../assets/blobBurgerMenuV2.svg);
+		background-image: url(../../assets/blobBurgerMenuV2.svg);
 		background-color: var(--white-color);
 		background-size: cover;
 		background-repeat: repeat;
@@ -161,7 +161,7 @@
 					font-size: 1.5rem;
 					text-transform: uppercase;
 					font-weight: 500;
-					transition: all 0.2s ease-in-out;
+					
 
 					&:hover {
 						color: var(--secondary-color);

@@ -1,11 +1,8 @@
 #skills {
 	position: relative;
-	background-image: url(../../assets/skillsShapesBG.svg),
-   url(../../assets/skillsWaveBG.svg);
+	background-image: url(../../assets/skillsShapesBG.svg), url(../../assets/skillsWaveBG.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
-
-	
 }
 
 .app__skills {
@@ -161,4 +158,13 @@
 		max-width: 500px !important;
 		line-height: 2 !important;
 	}
+}
+
+#tiles {
+	width: 100%;
+	height: 300px;
+	background-color: aliceblue;
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
 }

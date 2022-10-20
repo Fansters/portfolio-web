@@ -27,10 +27,16 @@ const Navbar = () => {
 			<ul className='app__navbar-links'>
 				{["home", "about", "work", "skills", "contact"].map((item) => (
 					<li className='app__flex p-text' key={`link-${item}`}>
-						<div id='navbar__div' />
-						<a className={`navLink-${item}`} href={`#${item}`}>
+						<motion.div id='navbar__div' />
+						<motion.a
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.8 }}
+							transition={{ type: "spring", stiffness: 400, damping: 17 }}
+							className={`navLink-${item}`}
+							href={`#${item}`}
+						>
 							{item}
-						</a>
+						</motion.a>
 						<div id='navbar__divv' />
 					</li>
 				))}

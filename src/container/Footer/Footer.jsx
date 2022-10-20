@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
+import { motion } from "framer-motion";
 import { client } from "../../client";
 import "./Footer.scss";
 
@@ -54,7 +55,8 @@ const Footer = () => {
 			{!isFormSubmitted ? (
 				<div className='app__footer-form app__flex'>
 					<div className='app__flex'>
-						<input
+						<motion.input
+							whileTap={{ scale: 1.1 }}
 							className='p-text '
 							type='text'
 							placeholder='Tavs vārds'
@@ -82,9 +84,15 @@ const Footer = () => {
 							onChange={handleChangeInput}
 						/>
 					</div>
-					<button type='button' className='p-text' onClick={handleSubmit}>
+					<motion.button
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.7 }}
+						type='button'
+						className='p-text'
+						onClick={handleSubmit}
+					>
 						{loading ? "Sūta..." : "Sūtīt ziņu"}
-					</button>
+					</motion.button>
 				</div>
 			) : (
 				<div>
