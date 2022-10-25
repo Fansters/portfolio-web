@@ -84,7 +84,8 @@ const Footer = () => {
 							onChange={handleChangeInput}
 						/>
 					</div>
-					<motion.button
+               <motion.button
+                  // make website in darkmode as regular
                // add new projects
                // change about page
                // dark mode for whole page
