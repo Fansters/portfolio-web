@@ -85,6 +85,10 @@ const Footer = () => {
 						/>
 					</div>
 					<motion.button
+               // add new projects
+               // change about page
+               // dark mode for whole page
+               // btn should work only when input is valid!
 						whileHover={{ scale: 1.2 }}
 						whileTap={{ scale: 0.7 }}
 						type='button'
