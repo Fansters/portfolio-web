@@ -41,7 +41,6 @@ const Navbar = () => {
 				))}
 			</ul>
 
-			{/* Motion ani menu */}
 
 			{/* Burger menu */}
 			<div className='app__navbar-menu'>
