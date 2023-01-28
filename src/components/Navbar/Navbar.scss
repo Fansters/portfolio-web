@@ -52,6 +52,10 @@
 		cursor: pointer;
 		flex-direction: column;
 
+		&:hover a {
+			color: var(--secondary-color);
+		}
+
 		div {
 			width: 150%;
 			height: 0.0625rem;
@@ -68,17 +72,15 @@
 			transform: translateY(7px);
 		}
 
-		a {
+		.linkStyle {
 			color: var(--gray-color);
 			text-decoration: none;
 			flex-direction: column;
 			text-transform: uppercase;
 			font-weight: 500;
-			
-
-			&:hover {
-				color: var(--secondary-color);
-			}
+		}
+		.active {
+			color: var(--secondary-color);
 		}
 
 		&:hover {
@@ -161,7 +163,6 @@
 					font-size: 1.5rem;
 					text-transform: uppercase;
 					font-weight: 500;
-					
 
 					&:hover {
 						color: var(--secondary-color);

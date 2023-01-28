@@ -28,10 +28,10 @@ const Navbar = () => {
 					<li className='app__flex p-text' key={`link-${item}`}>
 						<motion.div id='navbar__div' />
 						<motion.a
-							whileHover={{ scale: 1.1 }}
+							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.8 }}
 							transition={{ type: "spring", stiffness: 400, damping: 17 }}
-							className={`navLink-${item}`}
+							className={`linkStyle ${item == item ? "active" : ""} `}
 							href={`#${item}`}
 						>
 							{item}
@@ -40,7 +40,6 @@ const Navbar = () => {
 					</li>
 				))}
 			</ul>
-
 
 			{/* Burger menu */}
 			<div className='app__navbar-menu'>
