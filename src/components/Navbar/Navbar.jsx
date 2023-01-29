@@ -17,6 +17,13 @@ const Navbar = () => {
 	// 	}
 	// };
 
+	// const handleClick = (event) => {
+	// 	// event.currentTarget.style.backgroundColor = "salmon";
+	// 	event.currentTarget.style.color = "var(--secondary-color)";
+
+	// 	// event.currentTarget.classList.add("my-class-1", "my-class-2");
+	// };
+
 	return (
 		<nav className='app__navbar'>
 			<div className='app__navbar-logo'>
@@ -31,7 +38,7 @@ const Navbar = () => {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.8 }}
 							transition={{ type: "spring", stiffness: 400, damping: 17 }}
-							className={`linkStyle ${item == item ? "active" : ""} `}
+							className={`linkStyle`}
 							href={`#${item}`}
 						>
 							{item}
