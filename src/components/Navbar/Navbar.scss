@@ -6,7 +6,7 @@
 	align-items: center;
 
 	padding: 1.75rem 2rem;
-	background: rgba(255, 255, 255, 0.694);
+	background-color: var(--background-color);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	border-bottom: 1px solid #387eff;
@@ -73,14 +73,12 @@
 		}
 
 		.linkStyle {
-			color: var(--gray-color);
+			color: var(--secondary-color);
+			// color: var(--gray-color);
 			text-decoration: none;
 			flex-direction: column;
 			text-transform: uppercase;
 			font-weight: 500;
-		}
-		.active {
-			color: var(--secondary-color);
 		}
 
 		&:hover {
