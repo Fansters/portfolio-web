@@ -1,6 +1,6 @@
 #contact {
 	position: relative;
-	background-image: url(../../assets/stackedFooterBG.jpg);
+	background-image: url(../../assets/layered-waves-haike-footer-dark.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -29,7 +29,7 @@
 		padding: 1rem;
 		border-radius: 10px;
 		cursor: pointer;
-		background-color: #387eff;
+		background:linear-gradient(245deg, var(--secondary-color), var(--third-color));
 		transition: all 0.25s ease-in-out;
 
 		img {
@@ -47,7 +47,7 @@
 		}
 
 		&:hover {
-			box-shadow: 0 0 15px #387eff80;
+			box-shadow: 0 0 10px #387eff9c;
 			// scale: 1.05;
 		}
 
@@ -78,7 +78,7 @@
 		margin: 0.75rem 0;
 		border-radius: 10px;
 		cursor: pointer;
-		background-color: #546075;
+		background-color: #2a3b5d;
 		transition: all 0.25s ease-in-out;
 
 		input,
@@ -87,32 +87,32 @@
 			padding: 0.95rem;
 			border: none;
 			border-radius: 7px;
-			background-color: #546075;
+			background-color: #283857;
 
 			font-family: var(--font-base);
 			color: var(--white-color);
 			outline: none;
 		}
 		::placeholder {
-			color: white;
+			color: var(--secondary-color);
 			opacity: 1; /* Firefox */
 		}
 
 		:-ms-input-placeholder {
 			/* Internet Explorer 10-11 */
-			color: white;
+			color: var(--secondary-color);
 		}
 
 		::-ms-input-placeholder {
 			/* Microsoft Edge */
-			color: white;
+			color: var(--secondary-color);
 		}
 
 		textarea {
 			height: 170px;
 		}
 		&:hover {
-			box-shadow: 0 0 25px var(--primary-color);
+			box-shadow: 0 0 10px var(--third-color);
 		}
 	}
 

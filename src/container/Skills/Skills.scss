@@ -1,6 +1,7 @@
 #skills {
 	position: relative;
-	background-image: url(../../assets/skillsShapesBG.svg), url(../../assets/skillsWaveBG.svg);
+	background-color: var(--rectangle-color);
+	background-image: url(../../assets/skillsShapesBG.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
