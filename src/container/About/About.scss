@@ -1,11 +1,14 @@
 #about {
 	position: relative;
-	background-image: url(../../assets/aboutWaveBG.svg), url(../../assets/aboutBGShapesV3.svg);
-	background-repeat: no-repeat, no-repeat;
-	background-size: cover, cover;
+	// background-image: url(../../assets/aboutWaveBG.svg), url(../../assets/aboutBGShapesV3.svg);
+	background-color: #1d273b;
+	background-repeat: no-repeat;
+	background-size: cover;
+   // padding-bottom: 6.25rem;
 	@media screen and(min-width:500px) {
-		background-image: url(../../assets/aboutTopBGWave.svg), url(../../assets/aboutWaveBG.svg),
-			url(../../assets/aboutBGShapesV3.svg);
+		background-image: 
+      // url(../../assets/aboutTopBGWave.svg), url(../../assets/aboutWaveBG.svg),
+			url(../../assets/polygon-scatter-Dark.svg);
 	}
 }
 .app__about {

@@ -112,12 +112,12 @@
 	padding: 1rem;
 
 	div {
-		width: 40px;
-		height: 40px;
+		width: 45px;
+		height: 45px;
 		border-radius: 50%;
-		background-color: var(--white-color);
+		background-color: var(--secondary-color);
 		margin: 0.25rem 0;
-		border: 1px solid var(--lightGray-color);
+		// border: 1px solid var(--lightGray-color);
 
 		display: flex;
 		justify-content: center;
@@ -126,17 +126,18 @@
 		transition: all 0.3s ease-in-out;
 
 		svg {
-			width: 15px;
-			height: 15px;
-			color: var(--gray-color);
+			width: 16px;
+			height: 16px;
+			color: var(--white-color);
+			transition: all 0.3s ease-in-out;
 		}
 
 		&:hover {
-			background-color: var(--secondary-color);
-			border-color: var(--secondary-color);
+			background-color: var(--third-color);
+			// border-color: var(--secondary-color);
 
 			svg {
-				color: var(--white-color);
+				color: var(--lightGray-color);
 			}
 		}
 
@@ -163,8 +164,8 @@
 	padding: 1rem;
 
 	.app__navigation-dot {
-		width: 10px;
-		height: 10px;
+		width: 11px;
+		height: 11px;
 		border-radius: 50%;
 		background-color: #cbcbcb;
 		margin: 0.5rem;

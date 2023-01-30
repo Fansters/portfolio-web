@@ -5,13 +5,15 @@
 
 	--primary-color: #ecf2ff;
 	--secondary-color: #387eff;
+	--third-color: #0358f7;
 	--black-color: #030303;
 	--lightGray-color: #e4e4e4;
 	--gray-color: #6b7688;
 	--brown-color: #46364a;
 	--white-color: #ffffff;
 	--test-color: #ffe6de;
-	--background-color: #2d2d2d;
+	--background-color: #262626;
+	--rectangle-color: #1d273b;
 }
 
 * {
