@@ -29,7 +29,7 @@
 		padding: 1rem;
 		border-radius: 10px;
 		cursor: pointer;
-		background:linear-gradient(245deg, var(--secondary-color), var(--third-color));
+		background: linear-gradient(245deg, var(--secondary-color), var(--third-color));
 		transition: all 0.25s ease-in-out;
 
 		img {
@@ -92,6 +92,7 @@
 			font-family: var(--font-base);
 			color: var(--white-color);
 			outline: none;
+			box-shadow: 0 0 10px #387eff55;
 		}
 		::placeholder {
 			color: var(--secondary-color);
@@ -111,9 +112,6 @@
 		textarea {
 			height: 170px;
 		}
-		&:hover {
-			box-shadow: 0 0 10px var(--third-color);
-		}
 	}
 
 	button {
@@ -131,4 +129,13 @@
 		width: 100%;
 		margin: 1rem 0;
 	}
+}
+
+@keyframes background-pan {
+   from{
+      background-position: 0 center;
+   }
+   to{
+      background-position: -200% center;
+   }
 }

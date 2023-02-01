@@ -1,15 +1,9 @@
 #about {
 	position: relative;
-	// background-image: url(../../assets/aboutWaveBG.svg), url(../../assets/aboutBGShapesV3.svg);
 	background-color: #1d273b;
-	background-repeat: no-repeat;
-	background-size: cover;
-   // padding-bottom: 6.25rem;
-	@media screen and(min-width:500px) {
-		background-image: 
-      // url(../../assets/aboutTopBGWave.svg), url(../../assets/aboutWaveBG.svg),
-			url(../../assets/polygon-scatter-Dark.svg);
-	}
+	background-image: url(../../assets/polygon-scatter-Dark.svg);
+	background-size: 97%;
+	animation: mymove 10s linear infinite;
 }
 .app__about {
 	flex: 1;
@@ -59,5 +53,11 @@ h2 {
 		img {
 			height: 320px;
 		}
+	}
+}
+
+@keyframes mymove {
+	50% {
+		background-size: 92%;
 	}
 }

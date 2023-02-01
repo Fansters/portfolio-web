@@ -4,10 +4,12 @@
 	// background-size: cover;
 	// background-repeat: repeat;
 	// background-position: center;
-
-	background-image: url(../../assets/layered-waves-darkBlue21.svg);
+	// need to fix bg on mobile
+	background-image: url(../../assets/layered-waves-haikei200.svg);
 	background-repeat: no-repeat;
-	background-size:cover;
+	background-position: 0 bottom;
+	background-size: 200%;
+	animation: bgmove 6s alternate-reverse infinite;
 
 	.app__wrapper {
 		padding: 0;
@@ -85,9 +87,9 @@
 		background-color: var(--secondary-color);
 		box-shadow: 0 0 20px rgba(0, 157, 255, 0.652);
 
-      h1{
-         color: var(--white-color);
-      }
+		h1 {
+			color: var(--white-color);
+		}
 
 		@media screen and(max-width:480px) {
 			padding: 1rem 1.5rem;
@@ -258,5 +260,14 @@
 	to {
 		scale: 0.99;
 		transform: translateY(0.25rem);
+	}
+}
+
+@keyframes bgmove {
+	0% {
+		background-position: 0rem bottom;
+	}
+	100% {
+		background-position: -105rem bottom;
 	}
 }

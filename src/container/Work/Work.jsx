@@ -62,7 +62,16 @@ const Work = () => {
 			>
 				{filterWork.map((work, index) => (
 					<div className='app__work-item app__flex' key={index}>
+						<div className='app__work-content app__flex'>
+							<h4 className=''>{work.title}</h4>
+							{/* <p className='' style={{ marginTop: 10 }}>
+								{work.description}
+							</p> */}
+						</div>
 						<div className='app__work-img app__flex'>
+							<div className='app__work-tag app__flex'>
+								<p className=''>{work.tags[0]}</p>
+							</div>
 							<img src={urlFor(work.imgUrl)} alt={work.name} />
 
 							<motion.div
@@ -91,17 +100,6 @@ const Work = () => {
 									</motion.div>
 								</a>
 							</motion.div>
-						</div>
-
-						<div className='app__work-content app__flex'>
-							<h4 className='bold-text'>{work.title}</h4>
-							<p className='p-text' style={{ marginTop: 10 }}>
-								{work.description}
-							</p>
-
-							<div className='app__work-tag app__flex'>
-								<p className='p-text'>{work.tags[0]}</p>
-							</div>
 						</div>
 					</div>
 				))}

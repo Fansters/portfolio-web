@@ -56,7 +56,7 @@ const Footer = () => {
 				<div className='app__footer-form app__flex'>
 					<div className='app__flex'>
 						<motion.input
-							whileTap={{ scale: 1.1 }}
+							whileTap={{ scale: 1.01 }}
 							className='p-text '
 							type='text'
 							placeholder='Tavs vārds'
@@ -66,7 +66,8 @@ const Footer = () => {
 						/>
 					</div>
 					<div className='app__flex'>
-						<input
+						<motion.input
+							whileTap={{ scale: 1.01 }}
 							className='p-text'
 							type='email'
 							placeholder='Tavs e-pasts'
@@ -76,7 +77,8 @@ const Footer = () => {
 						/>
 					</div>
 					<div>
-						<textarea
+						<motion.textarea
+							whileTap={{ scale: 1.01 }}
 							className='p-text'
 							placeholder='Tava ziņa'
 							value={message}
@@ -84,12 +86,12 @@ const Footer = () => {
 							onChange={handleChangeInput}
 						/>
 					</div>
-               <motion.button
-                  // make website in darkmode as regular
-               // add new projects
-               // change about page
-               // dark mode for whole page
-               // btn should work only when input is valid!
+					<motion.button
+						// make website in darkmode as regular
+						// add new projects
+						// change about page
+						// dark mode for whole page
+						// btn should work only when input is valid!
 						whileHover={{ scale: 1.2 }}
 						whileTap={{ scale: 0.7 }}
 						type='button'
