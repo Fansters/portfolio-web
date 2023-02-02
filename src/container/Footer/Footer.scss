@@ -1,8 +1,10 @@
 #contact {
 	position: relative;
 	background-image: url(../../assets/layered-waves-haike-footer-dark.svg);
-	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: 0 -20rem;
+	background-size: 200%;
+	animation: footermove 4s alternate-reverse ease-in-out infinite;
 }
 
 .app__footer {
@@ -131,11 +133,11 @@
 	}
 }
 
-@keyframes background-pan {
-   from{
-      background-position: 0 center;
-   }
-   to{
-      background-position: -200% center;
-   }
+@keyframes footermove {
+	0% {
+		background-position: -10rem -15rem;
+	}
+	100% {
+		background-position: -100rem -10rem;
+	}
 }

@@ -9,7 +9,7 @@
 	background-repeat: no-repeat;
 	background-position: 0 bottom;
 	background-size: 200%;
-	animation: bgmove 6s alternate-reverse infinite;
+	animation: bgmove 3s alternate-reverse ease-in-out infinite;
 
 	.app__wrapper {
 		padding: 0;

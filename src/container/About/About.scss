@@ -2,8 +2,8 @@
 	position: relative;
 	background-color: #1d273b;
 	background-image: url(../../assets/polygon-scatter-Dark.svg);
-	background-size: 97%;
-	animation: mymove 10s linear infinite;
+	background-size: 107%;
+	animation: backgroundMoveAbout 115s linear infinite;
 }
 .app__about {
 	flex: 1;
@@ -11,12 +11,25 @@
 	flex-direction: column;
 }
 h2 {
-	background: url(../../assets/blurry-gradient-haikei.png);
+	background: linear-gradient(
+		to left,
+		var(--secondary-color),
+		var(--fourth-color),
+		var(--third-color),
+		var(--secondary-color),
+		var(--third-color),
+		var(--fourth-color),
+		var(--third-color),
+		var(--secondary-color),
+		var(--fourth-color),
+		var(--secondary-color)
+	);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: #2e2e2e;
-	background-size: cover;
+	background-size: 200%;
+	animation: bgPan 9s linear infinite;
 
 	span {
 		color: #2e2e2e;
@@ -56,8 +69,22 @@ h2 {
 	}
 }
 
-@keyframes mymove {
-	50% {
-		background-size: 92%;
+// wave bg ani
+@keyframes backgroundMoveAbout {
+	from {
+		background-position: 0 center;
+	}
+	to {
+		background-position: 600% center;
+	}
+}
+
+// texxt-gradient-bg ani
+@keyframes bgPan {
+	from {
+		background-position: 0% center;
+	}
+	to {
+		background-position: -200% center;
 	}
 }
