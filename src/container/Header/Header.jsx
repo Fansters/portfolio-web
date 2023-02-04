@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 // import KUTE from "kute.js";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 
 import { AppWrap } from "../../wrapper";
 // import { Mesh } from "three";
 import { useRef } from "react";
+import { TextureLoader } from "three";
 
 // const scaleVariants = {
 // 	whileInView: {
@@ -22,19 +23,30 @@ import { useRef } from "react";
 
 function Cube() {
 	const meshRef = useRef(null);
+	const texture_1 = useLoader(TextureLoader, "textures/css.png");
+	const texture_2 = useLoader(TextureLoader, "textures/html.png");
+	const texture_3 = useLoader(TextureLoader, "textures/javascript.png");
+	const texture_4 = useLoader(TextureLoader, "textures/react.png");
+	const texture_5 = useLoader(TextureLoader, "textures/sass.png");
+	const texture_6 = useLoader(TextureLoader, "textures/tailWind.png");
 	useFrame(() => {
 		if (!meshRef.current) {
 			return;
 		}
 
-		meshRef.current.rotation.x += 0.002;
-		meshRef.current.rotation.y += 0.005;
+		meshRef.current.rotation.x += 0.02;
+		meshRef.current.rotation.y += 0.05;
 	});
 
 	return (
 		<mesh ref={meshRef}>
 			<boxGeometry />
-			<meshStandardMaterial />
+			<meshBasicMaterial attach='material-1' map={texture_1} transparent />
+			<meshBasicMaterial attach='material-2' map={texture_2} transparent />
+			<meshBasicMaterial attach='material-3' map={texture_3} transparent />
+			<meshBasicMaterial attach='material-4' map={texture_4} transparent />
+			<meshBasicMaterial attach='material-5' map={texture_5} transparent />
+			<meshBasicMaterial attach='material-6' map={texture_6} transparent />
 		</mesh>
 	);
 }
@@ -101,7 +113,11 @@ const Header = () => (
 		{/* three js anims */}
 		<Canvas>
 			<mesh>
-				<Cube />
+				<ambientLight />
+				<pointLight position={[10, 10, 10]} />
+				<Suspense fallback={null}>
+					<Cube />
+				</Suspense>
 			</mesh>
 		</Canvas>
 	</div>
