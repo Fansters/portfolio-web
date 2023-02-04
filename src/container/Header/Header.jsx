@@ -3,21 +3,41 @@ import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 // import KUTE from "kute.js";
-
-import { three } from "three";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 import { AppWrap } from "../../wrapper";
+// import { Mesh } from "three";
+import { useRef } from "react";
 
-const scaleVariants = {
-	whileInView: {
-		scale: [0, 1],
-		opacity: [0, 1],
-		transition: {
-			duration: 1,
-			ease: "easeInOut",
-		},
-	},
-};
+// const scaleVariants = {
+// 	whileInView: {
+// 		scale: [0, 1],
+// 		opacity: [0, 1],
+// 		transition: {
+// 			duration: 1,
+// 			ease: "easeInOut",
+// 		},
+// 	},
+// };
+
+function Cube() {
+	const meshRef = useRef(null);
+	useFrame(() => {
+		if (!meshRef.current) {
+			return;
+		}
+
+		meshRef.current.rotation.x += 0.002;
+		meshRef.current.rotation.y += 0.005;
+	});
+
+	return (
+		<mesh ref={meshRef}>
+			<boxGeometry />
+			<meshStandardMaterial />
+		</mesh>
+	);
+}
 
 // var tween = KUTE.fromTo(
 // 	"#blob1",
@@ -49,22 +69,17 @@ const Header = () => (
 			</div>
 		</motion.div>
 
-		<motion.div
+		{/* laptop img */}
+		{/* <motion.div
 			whileInView={{ opacity: [0, 1] }}
 			transition={{ duration: 0.5, delayChildren: 0.5 }}
 			className='app__header-img'
 		>
 			<img className='app__header-laptop' src={images.laptop} alt='profile_bg' />
-			{/* <motion.img
-				whileInView={{ scale: [0, 1] }}
-				transition={{ duration: 1, ease: "easeInOut" }}
-				src={images.circle}
-				alt='profile_circle'
-				className='overlay_circle'
-			/> */}
-		</motion.div>
+		</motion.div> */}
 
-		<motion.div
+		{/* skills imgs */}
+		{/* <motion.div
 			variants={scaleVariants}
 			whileInView={scaleVariants.whileInView}
 			className='app__header-circles mobile-hidden'
@@ -81,7 +96,14 @@ const Header = () => (
 					<img src={circle} alt='profile_bg' />
 				</div>
 			))}
-		</motion.div>
+		</motion.div> */}
+
+		{/* three js anims */}
+		<Canvas>
+			<mesh>
+				<Cube />
+			</mesh>
+		</Canvas>
 	</div>
 );
 
