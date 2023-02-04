@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 // import KUTE from "kute.js";
 
+import { three } from "three";
+
 import { AppWrap } from "../../wrapper";
 
 const scaleVariants = {
@@ -62,7 +64,11 @@ const Header = () => (
 			/> */}
 		</motion.div>
 
-		<motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className='app__header-circles mobile-hidden'>
+		<motion.div
+			variants={scaleVariants}
+			whileInView={scaleVariants.whileInView}
+			className='app__header-circles mobile-hidden'
+		>
 			{[images.css, images.html, images.sass].map((circle, index) => (
 				<div className='circle-cmp app__flex' key={`circle-${index}`}>
 					<img src={circle} alt='profile_bg' />
