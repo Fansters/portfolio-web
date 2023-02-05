@@ -29,6 +29,7 @@ function Cube() {
 	const texture_4 = useLoader(TextureLoader, "textures/react.png");
 	const texture_5 = useLoader(TextureLoader, "textures/sass.png");
 	const texture_6 = useLoader(TextureLoader, "textures/tailWind.png");
+	const texture_7 = useLoader(TextureLoader, "textures/tailWind.png");
 	useFrame(() => {
 		if (!meshRef.current) {
 			return;
@@ -47,6 +48,7 @@ function Cube() {
 			<meshBasicMaterial attach='material-4' map={texture_4} transparent />
 			<meshBasicMaterial attach='material-5' map={texture_5} transparent />
 			<meshBasicMaterial attach='material-6' map={texture_6} transparent />
+			<meshBasicMaterial attach='material-6' map={texture_7} transparent />
 		</mesh>
 	);
 }
