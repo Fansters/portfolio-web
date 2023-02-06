@@ -10,6 +10,37 @@ import { AppWrap } from "../../wrapper";
 import { useRef } from "react";
 import { TextureLoader } from "three";
 
+// CHATGPT 3D GLOBE
+// import React, { useRef } from "react";
+// import { Canvas, useFrame, useThree } from "react-three-fiber";
+// import { Sphere } from "drei";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+// const Globe = () => {
+//   const meshRef = useRef();
+//   const { camera, gl } = useThree();
+
+//   useFrame((state) => {
+//     meshRef.current.rotation.x = meshRef.current.rotation.y += 0.01;
+//   });
+
+//   return (
+//     <Sphere ref={meshRef} args={[2, 32, 32]}>
+//       <meshBasicMaterial attach="material" map={new THREE.TextureLoader().load("earth.jpg")} />
+//     </Sphere>
+//   );
+// };
+
+// const App = () => (
+//   <Canvas camera={{ position: [0, 0, 5] }}>
+//     <Globe />
+//     <OrbitControls />
+//   </Canvas>
+// );
+
+// export default App;
+
+
 // const scaleVariants = {
 // 	whileInView: {
 // 		scale: [0, 1],
