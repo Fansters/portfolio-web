@@ -1,15 +1,13 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useRef, useState, useMemo, useEffect } from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 
 import { AppWrap } from "../../wrapper";
 import PropTypes from "prop-types";
 import { images } from "../../constants";
-import randomWord from "random-words";
 
 // imp stuff from example 3D
 import * as THREE from "three";
-import { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text, TrackballControls, Html } from "@react-three/drei";
 
@@ -20,8 +18,9 @@ function Word({ children, ...props }) {
 	const color = new THREE.Color();
 	const fontProps = {
 		// font: "/Inter-Bold.woff",
+		index: 99,
 		fontSize: 2,
-		letterSpacing: -0.05,
+		letterSpacing: 0.01,
 		lineHeight: 1,
 		"material-toneMapped": false,
 	};
@@ -49,6 +48,7 @@ function Word({ children, ...props }) {
 			onClick={() => console.log("clicked")}
 			{...props}
 			{...fontProps}
+			className='globeText'
 		>
 			{children}
 		</Text>
@@ -57,6 +57,7 @@ function Word({ children, ...props }) {
 
 function Cloud({ count = 4, radius = 20, customWords = [] }) {
 	// Create a count x count random words with spherical distribution
+
 	const words = useMemo(() => {
 		const temp = [];
 		const spherical = new THREE.Spherical();
@@ -90,6 +91,8 @@ function Cloud({ count = 4, radius = 20, customWords = [] }) {
 		</Word>
 	));
 }
+
+//CLOUD WITH IMAGES IN FUTURE
 
 // function Image({ children, ...props }) {
 // 	const ref = useRef();
@@ -138,7 +141,7 @@ function Cloud({ count = 4, radius = 20, customWords = [] }) {
 // }
 
 const Header = () => (
-	<div className='app__header app__flex'>
+	<div className='app__header app__flex disable-text-selection'>
 		<motion.div
 			whileInView={{ x: [-100, 0], opacity: [0, 1] }}
 			transition={{ duration: 0.5 }}
@@ -161,11 +164,11 @@ const Header = () => (
 		</motion.div>
 
 		<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-			<fog attach='fog' args={["#262626", 5, 50]} />
+			<fog attach='fog' args={["#262626", 0, 60]} />
 			<Suspense fallback={null}>
 				<Cloud count={4} radius={15} customWords={skillsList} />
 			</Suspense>
-			<TrackballControls />
+			<TrackballControls noPan={true} noZoom={true} />
 		</Canvas>
 	</div>
 );
