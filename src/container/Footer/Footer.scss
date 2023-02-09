@@ -5,6 +5,11 @@
 	background-position: 0 -20rem;
 	background-size: 200%;
 	animation: footermove 4s alternate-reverse ease-in-out infinite;
+
+   @media screen and(max-width:840px) {
+      background-size: 430%;
+		animation: footermoveMobile 3s alternate-reverse ease-in-out infinite;
+	}
 }
 
 .app__footer {
@@ -135,9 +140,17 @@
 
 @keyframes footermove {
 	0% {
-		background-position: -10rem -15rem;
+		background-position: -10rem -5rem;
 	}
 	100% {
-		background-position: -100rem -10rem;
+		background-position: -50rem -5rem;
+	}
+}
+@keyframes footermoveMobile {
+	0% {
+		background-position: 0rem -5rem;
+	}
+	100% {
+		background-position: -40rem -5rem;
 	}
 }

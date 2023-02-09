@@ -8,7 +8,7 @@ import { images } from "../../constants";
 
 // imp stuff from example 3D
 import * as THREE from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Text, TrackballControls, Html } from "@react-three/drei";
 
 const skillsList = ["JAVASCRIPT", "HTML", "SASS", "CSS", "REACT", "TAILWIND", "WORDPRESS", "ELEMENTOR", "FIGMA"];
@@ -18,8 +18,7 @@ function Word({ children, ...props }) {
 	const color = new THREE.Color();
 	const fontProps = {
 		// font: "/Inter-Bold.woff",
-		index: 99,
-		fontSize: 2,
+		fontSize: 2.3,
 		letterSpacing: 0.01,
 		lineHeight: 1,
 		"material-toneMapped": false,
@@ -140,6 +139,8 @@ function Cloud({ count = 4, radius = 20, customWords = [] }) {
 // 	));
 // }
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 const Header = () => (
 	<div className='app__header app__flex disable-text-selection'>
 		<motion.div
@@ -149,7 +150,7 @@ const Header = () => (
 		>
 			<div className='app__header-badge'>
 				<div className='badge-cmp app__flex'>
-					<span>👋</span>
+					<span className='wave'>👋</span>
 					<div style={{ marginLeft: 20 }}>
 						<p className='p-text white-text'> &#60; Hello, I am </p>
 						<h1 className='head-text'>VVVVVVV</h1>
@@ -168,7 +169,7 @@ const Header = () => (
 			<Suspense fallback={null}>
 				<Cloud count={4} radius={15} customWords={skillsList} />
 			</Suspense>
-			<TrackballControls noPan={true} noZoom={true} />
+			{!isMobile && <TrackballControls noPan={true} noZoom={true} />}
 		</Canvas>
 	</div>
 );
