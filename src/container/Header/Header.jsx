@@ -17,19 +17,21 @@ const skillsList = ["JAVASCRIPT", "HTML", "SASS", "CSS", "REACT", "TAILWIND", "W
 function Word({ children, ...props }) {
 	const color = new THREE.Color();
 	const fontProps = {
-		// font: "/Inter-Bold.woff",
-		fontSize: 2.3,
+		fontSize: 2.4,
 		letterSpacing: 0.01,
 		lineHeight: 1,
 		"material-toneMapped": false,
 	};
+
 	const ref = useRef();
 	const [hovered, setHovered] = useState(false);
 	const over = (e) => (e.stopPropagation(), setHovered(true));
 	const out = () => setHovered(false);
 	// Change the mouse cursor on hover
 	useEffect(() => {
-		if (hovered) document.body.style.cursor = "pointer";
+		if (hovered) {
+			document.body.style.cursor = "pointer";
+		}
 		return () => (document.body.style.cursor = "auto");
 	}, [hovered]);
 	// Tie component to the render-loop
@@ -55,7 +57,14 @@ function Word({ children, ...props }) {
 }
 
 function Cloud({ count = 4, radius = 20, customWords = [] }) {
-	// Create a count x count random words with spherical distribution
+	const [time, setTime] = useState(0);
+
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setTime((prevTime) => prevTime + 0.002);
+		}, 16);
+		return () => clearInterval(intervalId);
+	}, []);
 
 	const words = useMemo(() => {
 		const temp = [];
@@ -72,9 +81,9 @@ function Cloud({ count = 4, radius = 20, customWords = [] }) {
 				temp.push([
 					new THREE.Vector3().setFromSpherical(
 						spherical.set(
-							radius + Math.random() * 5,
-							phiSpan * i + Math.random() * phiSpan,
-							thetaSpan * j + Math.random() * thetaSpan
+							radius + Math.sin(time + i) * 5,
+							phiSpan * i + Math.cos(time + j) * phiSpan,
+							thetaSpan * j + Math.sin(time + i + j) * thetaSpan
 						)
 					),
 					customWords[wordIndex],
@@ -83,7 +92,8 @@ function Cloud({ count = 4, radius = 20, customWords = [] }) {
 			}
 		}
 		return temp;
-	}, [count, radius, customWords]);
+	}, [count, radius, customWords, time]);
+
 	return words.map(([pos, word], index) => (
 		<Word key={index} position={pos}>
 			{word}
@@ -165,9 +175,9 @@ const Header = () => (
 		</motion.div>
 
 		<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-			<fog attach='fog' args={["#262626", 0, 60]} />
+			<fog attach='fog' args={["#262626", 0, 50]} />
 			<Suspense fallback={null}>
-				<Cloud count={4} radius={15} customWords={skillsList} />
+				<Cloud count={5} radius={18} customWords={skillsList} />
 			</Suspense>
 			{!isMobile && <TrackballControls noPan={true} noZoom={true} />}
 		</Canvas>
