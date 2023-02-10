@@ -177,7 +177,7 @@ const Header = () => (
 		<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
 			<fog attach='fog' args={["#262626", 0, 50]} />
 			<Suspense fallback={null}>
-				<Cloud count={5} radius={18} customWords={skillsList} />
+				<Cloud count={4} radius={18} customWords={skillsList} />
 			</Suspense>
 			{!isMobile && <TrackballControls noPan={true} noZoom={true} />}
 		</Canvas>

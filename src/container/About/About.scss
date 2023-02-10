@@ -1,3 +1,12 @@
+:root {
+	--spacing-s: 4px;
+	--spacing-m: 16px;
+	--spacing-l: 24px;
+	--spacing-xl: 32px;
+	--spacing-xxl: 64px;
+	--width-container: 1200px;
+}
+
 #about {
 	position: relative;
 	background-color: #1d273b;
@@ -35,38 +44,90 @@ h2 {
 		color: #2e2e2e;
 	}
 }
-
-.app__profiles {
-	display: flex;
-	justify-content: center;
+.hero-section {
 	align-items: flex-start;
-	flex-wrap: wrap;
-	margin-top: 2rem;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	// min-height: 100%;
+	justify-content: center;
+	padding: var(--spacing-xxl) var(--spacing-l);
 }
 
-.app__profile-item {
-	width: 190px;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	margin: 2rem;
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-column-gap: var(--spacing-s);
+	grid-row-gap: var(--spacing-s);
+	// max-width: var(--width-container);
+	width: 95rem;
 
-	img {
+	@media (min-width: 540px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (min-width: 960px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.card {
+	list-style: none;
+	position: relative;
+	margin: 2rem 3rem;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-bottom: 150%;
 		width: 100%;
-		height: 170px;
-		border-radius: 15px;
-		object-fit: cover;
 	}
 
-	@media screen and (min-width: 2000px) {
-		width: 370px;
-		margin: 2rem 4rem;
-
-		img {
-			height: 320px;
-		}
+	&__background {
+		background-image: url(../../assets/about01.png);
+		background-size: cover;
+		background-position: center;
+		border-radius: var(--spacing-m);
+		bottom: 0;
+		filter: brightness(0.95) saturate(1.2) contrast(1);
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform-origin: center;
+		transform: scale(1) translateZ(0);
+		transition: filter 200ms linear, transform 200ms linear;
 	}
+
+	&:hover &__background {
+		transform: scale(1.05) translateZ(0);
+	}
+
+	&__content {
+		left: 0;
+		padding: var(--spacing-m);
+		position: absolute;
+		top: 0;
+	}
+
+	&__category {
+		color: var(--text-light);
+		font-size: 0.9rem;
+		margin-bottom: var(--spacing-s);
+		text-transform: uppercase;
+	}
+
+	&__heading {
+		color: var(--text-lighter);
+		font-size: 1.9rem;
+		text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+		line-height: 1.4;
+		word-spacing: 100vw;
+	}
+}
+
+.card-grid:hover > .card:not(:hover) .card__background {
+	filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
 // wave bg ani

@@ -120,16 +120,6 @@
 	}
 }
 
-.app__header canvas {
-	// width: 110% !important;
-	// height: 110% !important;
-	margin-top: -2rem;
-
-	@media screen and(min-width:800px) {
-		// position: absolute;
-	}
-}
-
 @keyframes bgmovePC {
 	0% {
 		background-position: 0rem bottom;
