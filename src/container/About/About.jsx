@@ -27,12 +27,10 @@ const About = () => {
 			<section className='hero-section'>
 				<div className='card-grid'>
 					<a className='card' href='#'>
-						<div
-							className='card__background'
-						/>
+						<div className='card__background' />
 						<div className='card__content'>
-							<p className='card__category'>Category</p>
-							<h3 className='card__heading'>Example Card Heading</h3>
+							<p className='card__category'>Planning</p>
+							<h3 className='card__heading'>Exploring your needs</h3>
 						</div>
 					</a>
 					<a className='card' href='#'>
@@ -43,8 +41,8 @@ const About = () => {
 							}}
 						/>
 						<div className='card__content'>
-							<p className='card__category'>Category</p>
-							<h3 className='card__heading'>Example Card Heading</h3>
+							<p className='card__category'>Design</p>
+							<h3 className='card__heading'>Composing the gathared ideas</h3>
 						</div>
 					</a>
 					<a className='card' href='#'>
@@ -55,8 +53,8 @@ const About = () => {
 							}}
 						/>
 						<div className='card__content'>
-							<p className='card__category'>Category</p>
-							<h3 className='card__heading'>Example Card Heading</h3>
+							<p className='card__category'>Creation</p>
+							<h3 className='card__heading'>Websites comes to life.</h3>
 						</div>
 					</a>
 					<a className='card' href='#'>
@@ -67,8 +65,8 @@ const About = () => {
 							}}
 						/>
 						<div className='card__content'>
-							<p className='card__category'>Category</p>
-							<h3 className='card__heading'>Example Card Heading</h3>
+							<p className='card__category'>Finish</p>
+							<h3 className='card__heading'>Final touches and future maintenance </h3>
 						</div>
 					</a>
 				</div>
