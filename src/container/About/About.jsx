@@ -26,14 +26,14 @@ const About = () => {
 
 			<section className='hero-section'>
 				<div className='card-grid'>
-					<a className='card' href='#'>
+					<a className='card'>
 						<div className='card__background' />
 						<div className='card__content'>
 							<p className='card__category'>Planning</p>
 							<h3 className='card__heading'>Exploring your needs</h3>
 						</div>
 					</a>
-					<a className='card' href='#'>
+					<a className='card'>
 						<div
 							className='card__background'
 							style={{
@@ -45,7 +45,7 @@ const About = () => {
 							<h3 className='card__heading'>Composing the gathared ideas</h3>
 						</div>
 					</a>
-					<a className='card' href='#'>
+					<a className='card'>
 						<div
 							className='card__background'
 							style={{
@@ -57,7 +57,7 @@ const About = () => {
 							<h3 className='card__heading'>Websites comes to life.</h3>
 						</div>
 					</a>
-					<a className='card' href='#'>
+					<a className='card'>
 						<div
 							className='card__background'
 							style={{
