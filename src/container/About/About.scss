@@ -83,6 +83,11 @@ h2 {
 		width: 100%;
 	}
 
+	&:hover::before {
+		padding-bottom: 160%;
+		color: #2e2e2e;
+	}
+
 	&__background {
 		background-image: url(../../assets/about01.png);
 		background-size: cover;
