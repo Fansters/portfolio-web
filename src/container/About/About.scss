@@ -63,7 +63,7 @@ h2 {
 	width: 95rem;
 
 	@media (min-width: 540px) {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	// @media (min-width: 960px) {
@@ -74,7 +74,6 @@ h2 {
 .card {
 	list-style: none;
 	position: relative;
-	// margin: 1rem 2rem;
 	width: 100%;
 	height: 300px;
 
@@ -85,22 +84,26 @@ h2 {
 		width: 100%;
 	}
 
-
 	// &:hover::before {
 	// width: 110%;
 	// }
-   &:hover{
-      .card__category{
-         opacity: 1;
-         transform: translateX(0px);
-      }
-   }
+	&:hover {
+		.card__category {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		.card__background {
+			transform: scale(1.02) translateZ(0);
+			filter: brightness(0.95);
+		}
+	}
 
 	&__background {
 		background-image: url(../../assets/planning.jpg);
 		background-size: cover;
 		background-position: center;
 		border-radius: 5px;
+		border: 2px solid var(--background-color);
 		bottom: 0;
 		filter: brightness(0.55) saturate(0) contrast(1);
 		left: 0;
@@ -110,26 +113,25 @@ h2 {
 		transform-origin: center;
 		transform: scale(1) translateZ(0);
 		transition: filter 0.3s linear, transform 0.3s linear;
-
-		&:hover {
-			transform: scale(1.02) translateZ(0);
-			filter: brightness(0.95);
-
-			&__content {
-				transform: scale(1.25) translateZ(0);
-				filter: brightness(0.95);
-			}
-		}
+	}
+	.info {
+		background-image: url(../../assets/final.jpg);
+	}
+	.plan {
+		background-image: url(../../assets/planning.jpg);
 	}
 	.design {
 		background-image: url(../../assets/designing.jpg);
 	}
-	.program {
+	.code {
 		background-image: url(../../assets/programming.jpg);
 		background-position: bottom center;
 	}
+	.test {
+		background-image: url(../../assets/test.jpg);
+	}
 	.final {
-		background-image: url(../../assets/final.jpg);
+		background-image: url(../../assets/maintenance.jpg);
 	}
 
 	&__content {
@@ -166,16 +168,11 @@ h2 {
 	}
 	&__category {
 		font-size: 0.9rem;
-		margin-bottom: 0.9375rem;
+		margin-top: 0.9375rem;
 		text-transform: uppercase;
 		opacity: 0;
 		transform: translateX(-55px);
 		transition: all 0.3s ease-in-out;
-
-		// &:hover {
-		// 	opacity: 1;
-		// 	transform: translateX(10px);
-		// }
 	}
 
 	&__numbers {
@@ -193,6 +190,7 @@ h2 {
 
 .card-grid:hover > .card:not(:hover) .card__background {
 	filter: brightness(0.4) saturate(0) contrast(1.2) blur(15px);
+	// border: px solid var(--secondary-color);
 }
 
 // wave bg ani
