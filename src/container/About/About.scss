@@ -5,6 +5,11 @@
 	--spacing-xl: 32px;
 	--spacing-xxl: 64px;
 	--width-container: 1200px;
+
+	--background-color: #222;
+	--color-start: #e646ff;
+	--color-end: #8737ff;
+	--gradient: linear-gradient(90deg, var(--color-start), var(--color-end));
 }
 
 #about {
@@ -108,20 +113,29 @@ h2 {
 	}
 
 	&__background {
-		background-image: url(../../assets/planning.jpg);
-		background-size: cover;
+		background: url(../../assets/planning.jpg), var(--gradient);
+		background-origin: padding-box, border-box;
+		background-repeat: no-repeat; /* this is important */
+		border: 0.2rem solid transparent;
+		border-radius: 2px;
+		background-size: 59% 58%, cover;
 		background-position: center;
-		border-radius: 5px;
-		border: 2px solid var(--background-color);
+		// border-radius: 5px;
+		// border: 2px solid var(--background-color);
 		bottom: 0;
 		filter: brightness(0.55) saturate(0) contrast(1);
 		left: 0;
 		position: absolute;
 		right: 0;
 		top: 0;
+		margin: 1rem;
+		padding: 1rem;
 		transform-origin: center;
 		transform: scale(1) translateZ(0);
 		transition: filter 0.3s linear, transform 0.3s linear;
+	}
+	.border-glow {
+		box-shadow: 0 0 1rem 0 var(--color-end);
 	}
 	.info {
 		background-image: url(../../assets/final.jpg);

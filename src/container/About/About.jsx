@@ -27,7 +27,7 @@ const About = () => {
 			<section className='hero-section'>
 				<div className='card-grid'>
 					<a className='card'>
-						<div className='card__background info' />
+						<div className='card__background border-glow info' />
 						<div className='card__content'>
 							<h3 className='card__heading'>Information Gathering</h3>
 							<p className='card__category'>Exploring your needs</p>
