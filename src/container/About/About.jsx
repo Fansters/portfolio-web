@@ -77,7 +77,7 @@ const About = () => {
 						</div>
 					</a>
 					<a className='card'>
-						<div className='card__background final' />
+						<div className='card__background main' />
 						<div className='card__content'>
 							<h3 className='card__heading'>Maintenance</h3>
 							<p className='card__category'>Final touches and future maintenance </p>
