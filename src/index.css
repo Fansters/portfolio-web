@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap");
 
 :root {
 	--font-base: "DM Sans", sans-serif;
+	--font-nav: "Chakra Petch", sans-serif;
 
 	--primary-color: #ecf2ff;
 	--secondary-color: #387eff;

@@ -163,7 +163,7 @@ const Header = () => (
 					<span className='wave'>👋</span>
 					<div style={{ marginLeft: 20 }}>
 						<p className='p-text white-text'> &#60; Hello, I am </p>
-						<h1 className='head-text'>VVVVVVV</h1>
+						<h1 className='head-text'>Edmunds</h1>
 					</div>
 				</div>
 				{/* <ImageList /> */}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap");
 :root {
 	--spacing-s: 4px;
 	--spacing-m: 16px;
@@ -7,9 +8,9 @@
 	--width-container: 1200px;
 
 	--background-color: #222;
-	--color-start: #387eff;
-	--color-end: #00ffbf;
-	--gradient: linear-gradient(129deg, var(--color-start), var(--color-end));
+	--color-start: #390089;
+	--color-end: #85d800;
+	--gradient: linear-gradient(109deg, var(--color-start), var(--color-end));
 }
 
 #about {
@@ -101,8 +102,8 @@ h2 {
 			background-color: #081633;
 		}
 		.card__background {
-			box-shadow: 0 0 20px var(--fourth-color);
-			// transform: scale(1);
+			box-shadow: 0 0 30px var(--secondary-color);
+			transform: scale(0.99);
 			filter: brightness(0.65);
 		}
 		.card__content h3 {
@@ -154,8 +155,6 @@ h2 {
 		background-origin: padding-box, border-box;
 		background-repeat: no-repeat; /* this is important */
 		background-size: cover, contain;
-		// background-position: center;
-		// border: 1.2rem solid transparent;
 	}
 
 	&__content {
@@ -166,7 +165,21 @@ h2 {
 	}
 	&__content h3 {
 		transition: all 0.3s ease-in-out;
+		font-family: "Rajdhani", sans-serif;
+		font-size: 2.25rem;
 		// transition-delay: 0s 0.3s;
+		@media screen and(min-width:480px) {
+			font-size: 2.75rem;
+		}
+		@media screen and(min-width:700px) {
+			font-size: 2.25rem;
+		}
+		@media screen and(min-width:900px) {
+			font-size: 2.75rem;
+		}
+		@media screen and(min-width:1480px) {
+			font-size: 3rem;
+		}
 	}
 
 	&__heading {
