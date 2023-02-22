@@ -55,7 +55,7 @@
 		flex-direction: column;
 
 		&:hover a {
-			color: var(--secondary-color);
+			color: var(--third-color);
 		}
 
 		div {
@@ -81,11 +81,14 @@
 			flex-direction: column;
 			text-transform: uppercase;
 			font-weight: 500;
+			@media screen and(min-width:900px) {
+				font-size: 1.25rem;
+			}
 		}
 
 		&:hover {
 			div {
-				background-color: var(--secondary-color);
+				background-color: var(--fourth-color);
 			}
 			#navbar__div {
 				transform: translateY(-2px);
@@ -158,15 +161,11 @@
 				margin: 1rem;
 
 				a {
-					color: var(--gray-color);
+					color: var(--secondary-color);
 					text-decoration: none;
-					font-size: 1.5rem;
+					font-size: 2.5rem;
 					text-transform: uppercase;
 					font-weight: 500;
-
-					&:hover {
-						color: var(--secondary-color);
-					}
 				}
 			}
 		}
