@@ -33,9 +33,12 @@
 	@media screen and(min-width:768px) {
 		flex-direction: row;
 	}
+	@media screen and(min-width:1400px) {
+		width: 55%;
+	}
 
 	.app__footer-card {
-		width: 280px;
+		width: 300px;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
@@ -66,9 +69,9 @@
 			// scale: 1.05;
 		}
 
-		@media screen and(max-width:450px) {
-			width: 100%;
-		}
+		// @media screen and(min-width:450px) {
+		// 	width: 100%;
+		// }
 	}
 	// @media screen and(max-width:768px) {
 	// 	width: 100%;
@@ -87,6 +90,7 @@
 	width: 100%;
 	flex-direction: column;
 	margin: 1rem 2rem;
+
 	@media screen and(min-width:1200px) {
 		width: 70%;
 	}
@@ -107,7 +111,7 @@
 			border-radius: 7px;
 			background-color: #283857;
 
-			font-family: var(--font-base);
+			font-family: var(--font-nav);
 			color: var(--white-color);
 			outline: none;
 			box-shadow: 0 0 10px #387eff55;
@@ -129,16 +133,19 @@
 
 		textarea {
 			height: 170px;
+			font-family: var(--font-nav);
 		}
 	}
 
 	button {
-		padding: 1rem 2rem;
+		padding: .75rem 2rem;
 		border-radius: 10px;
 		border: none;
+		font-size: 1.25rem;
 		background-color: var(--secondary-color);
 		font-weight: 500;
 		color: var(--white-color);
+		font-family: var(--font-nav);
 		outline: none;
 		margin: 2rem 0 0 0;
 		cursor: pointer;
