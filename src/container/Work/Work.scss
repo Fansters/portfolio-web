@@ -82,12 +82,13 @@
 
 		transition: all 0.3s ease;
 		box-shadow: 0 0 10px #387eff55;
+		transform-style: preserve-3d;
 
 		@media screen and (min-width: 768px) {
 			&:hover {
-				scale: 1.05;
+				// scale: 1.05;
 				box-shadow: 0 0 15px #387eff94;
-				transform: translateY(-0.5rem);
+				// transform: translateY(-0.5rem);
 				border: 1px solid #387eff76;
 			}
 			&:hover::before {
