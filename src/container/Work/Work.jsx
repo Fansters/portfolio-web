@@ -6,11 +6,31 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
 
+const useIsMobile = () => {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+
+		checkMobile();
+		window.addEventListener("resize", checkMobile);
+
+		return () => {
+			window.removeEventListener("resize", checkMobile);
+		};
+	}, []);
+
+	return isMobile;
+};
+
 const Work = () => {
 	const [works, setWorks] = useState([]);
 	const [filterWork, setFilterWork] = useState([]);
 	const [activeFilter, setActiveFilter] = useState("All");
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+	const isMobile = useIsMobile();
 
 	useEffect(() => {
 		const query = '*[_type == "works"]';
@@ -78,9 +98,6 @@ const Work = () => {
 						<div className='app__work-item app__flex'>
 							<div className='app__work-content app__flex'>
 								<h4 className=''>{work.title}</h4>
-								{/* <p className='' style={{ marginTop: 10 }}>
-								{work.description}
-							</p> */}
 							</div>
 							<div className='app__work-img app__flex'>
 								<div className='app__work-tag app__flex'>
@@ -90,6 +107,8 @@ const Work = () => {
 
 								<motion.div
 									whileHover={{ opacity: [0, 1] }}
+									// Apply whileInView only on mobile devices
+									{...(isMobile ? { whileInView: { opacity: [0, 1] } } : {})}
 									transition={{ duration: 0.25, ease: "easeInOut", staggerChildren: 0.5 }}
 									className='app__work-hover app__flex'
 								>
@@ -97,6 +116,7 @@ const Work = () => {
 										<motion.div
 											whileInView={{ scale: [0, 1] }}
 											whileHover={{ scale: [1, 0.9] }}
+											onTap={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
 											className='app__flex'
 										>
