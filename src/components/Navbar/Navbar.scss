@@ -135,7 +135,7 @@
 		flex-direction: column;
 		// missing bg pic
 		background-image: url(../../assets/blobBurgerMenuV2.svg);
-		background-color: var(--white-color);
+		background: linear-gradient(#262626, #1d273b);
 		background-size: cover;
 		background-repeat: repeat;
 		box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
@@ -148,13 +148,13 @@
 		}
 		ul {
 			list-style: none;
-			margin: 0;
+			margin-bottom: 3rem;
 			padding: 0;
 			height: 100%;
 			width: 100%;
 			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
+			justify-content: center;
+			align-items: center;
 			flex-direction: column;
 
 			li {

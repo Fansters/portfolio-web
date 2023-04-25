@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { images } from "../../constants";
@@ -7,6 +7,29 @@ import "./Navbar.scss";
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
+
+	useEffect(() => {
+		if (toggle) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+
+		// Clean up when the component is unmounted
+		return () => {
+			document.body.style.overflow = "auto";
+		};
+	}, [toggle]);
+
+	const itemVariants = {
+		hidden: { opacity: 0, y: -10 },
+		show: { opacity: 1, y: 0 },
+	};
+
+	const listVariants = {
+		hidden: { opacity: 1 },
+		show: { opacity: 1, transition: { delayChildren: 0.75, staggerChildren: 0.1 } },
+	};
 
 	return (
 		<nav className='app__navbar'>
@@ -45,15 +68,15 @@ const Navbar = () => {
 							key='burger-menu'
 						>
 							<HiX onClick={() => setToggle(false)} />
-							<ul>
+							<motion.ul variants={listVariants} initial='hidden' animate='show'>
 								{["home", "about", "work", "skills", "contact"].map((item) => (
-									<li key={item}>
+									<motion.li key={item} variants={itemVariants}>
 										<a href={`#${item}`} onClick={() => setToggle(false)}>
 											{item}
 										</a>
-									</li>
+									</motion.li>
 								))}
-							</ul>
+							</motion.ul>
 						</motion.div>
 					)}
 				</AnimatePresence>
