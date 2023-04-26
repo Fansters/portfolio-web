@@ -9,16 +9,38 @@ const Footer = () => {
 	const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState({ name: false, email: false, message: false });
 
 	const { name, email, message } = formData;
+
+	const validateEmail = (email) => {
+		const re =
+			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(String(email).toLowerCase());
+	};
 
 	const handleChangeInput = (e) => {
 		const { name, value } = e.target;
 
 		setFormData({ ...formData, [name]: value });
+		setError({ ...error, [name]: false });
 	};
 
 	const handleSubmit = () => {
+		if (!name || !email || !message) {
+			setError({
+				name: !name,
+				email: !email,
+				message: !message,
+			});
+			return;
+		}
+
+		if (!validateEmail(email)) {
+			setError({ ...error, email: true });
+			return;
+		}
+
 		setLoading(true);
 
 		const contact = {
@@ -57,9 +79,14 @@ const Footer = () => {
 					<div className='app__flex'>
 						<motion.input
 							whileTap={{ scale: 1.01 }}
-							className='p-text '
+							className={`p-text ${error.name ? "error" : ""}`}
+							style={
+								error.name
+									? { borderColor: "red", borderWidth: "3px" }
+									: { borderColor: "transparent", borderWidth: "3px" }
+							}
 							type='text'
-							placeholder='Tavs vārds'
+							placeholder='Your Name*'
 							name='name'
 							value={name}
 							onChange={handleChangeInput}
@@ -68,9 +95,14 @@ const Footer = () => {
 					<div className='app__flex'>
 						<motion.input
 							whileTap={{ scale: 1.01 }}
-							className='p-text'
+							className={`p-text ${error.email ? "error" : ""}`}
+							style={
+								error.email
+									? { borderColor: "red", borderWidth: "3px" }
+									: { borderColor: "transparent", borderWidth: "3px" }
+							}
 							type='email'
-							placeholder='Tavs e-pasts'
+							placeholder='Email*'
 							name='email'
 							value={email}
 							onChange={handleChangeInput}
@@ -79,8 +111,13 @@ const Footer = () => {
 					<div>
 						<motion.textarea
 							whileTap={{ scale: 1.01 }}
-							className='p-text'
-							placeholder='Tava ziņa'
+							className={`p-text ${error.message ? "error" : ""}`}
+							style={
+								error.message
+									? { borderColor: "red", borderWidth: "3px" }
+									: { borderColor: "transparent", borderWidth: "3px" }
+							}
+							placeholder='Your message*'
 							value={message}
 							name='message'
 							onChange={handleChangeInput}
@@ -93,7 +130,7 @@ const Footer = () => {
 						className='p-text'
 						onClick={handleSubmit}
 					>
-						{loading ? "Sūta..." : "Sūtīt ziņu"}
+						{loading ? "Sending.." : "Send message"}
 					</motion.button>
 				</div>
 			) : (
